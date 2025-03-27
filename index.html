@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem vindo de volta</h2>
+                <p class="description description-primary">Para manter-se conectado conosco</p>
+                <p class="description description-primary">Faça o login com suas informações pessoais</p>
+                <button id="signin" class="btn btn-primary" onclick="verificarCadastro()">Entrar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Criar Conta</h2>
+                <form class="form" onsubmit="return validarFormulario()">
+                    <label class="label-input" for="email">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" id="email" placeholder="Email">
+                    </label>
+                    <label class="label-input" for="password">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" id="password" placeholder="Senha">
+                    </label>
+                    
+                    <!-- Link Esqueceu a senha -->
+                    <p><a href="reset_senha.html" class="forgot-password">Esqueceu a senha?</a></p>
+                    
+                    <!-- Mensagens de erro e sucesso -->
+                    <p id="error-message" style="color: red; display: none;">Preencha todos os campos corretamente</p>
+                    <p id="success-message" style="color: green; display: none;">Login realizado com sucesso!</p>
+                    <p id="register-message" style="color: blue; display: none;">Usuário cadastrado com sucesso!</p>
+                    
+                    <button type="submit" class="btn btn-second">Login</button>
+                    <button type="button" class="btn btn-secondary" onclick="limparCampos()">Limpar</button>
+                    <button type="button" id="cadastrar" class="btn btn-register" onclick="registrarUsuario()">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Salvar email localmente
+        document.getElementById('email').value = localStorage.getItem('email') || '';
+        document.getElementById('email').addEventListener('input', function() {
+            localStorage.setItem('email', this.value);
+        });
+        
+        function limparCampos() {
+            document.getElementById('password').value = '';
+        }
+        
+        function validarFormulario() {
+            let email = document.getElementById('email').value.trim();
+            let password = document.getElementById('password').value.trim();
+            let errorMessage = document.getElementById('error-message');
+            let successMessage = document.getElementById('success-message');
+            
+            if (email === '' || password === '') {
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+                return false;
+            }
+            
+            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            let usuarioEncontrado = usuarios.find(user => user.email === email && user.senha === password);
+            
+            if (usuarioEncontrado) {
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'block';
+                setTimeout(() => { window.location.href = 'dashboard.html'; }, 1000);
+                return false;
+            } else {
+                errorMessage.style.display = 'block';
+                errorMessage.innerText = 'Email ou senha incorretos';
+                successMessage.style.display = 'none';
+                return false;
+            }
+        }
+        
+        function verificarCadastro() {
+            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            if (usuarios.length > 0) {
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Nenhum usuário cadastrado! Cadastre-se primeiro.');
+            }
+        }
+
+        function registrarUsuario() {
+            let email = document.getElementById('email').value.trim();
+            let password = document.getElementById('password').value.trim();
+            let registerMessage = document.getElementById('register-message');
+            let errorMessage = document.getElementById('error-message');
+
+            if (email === '' || password === '') {
+                errorMessage.style.display = 'block';
+                errorMessage.innerText = 'Preencha todos os campos!';
+                registerMessage.style.display = 'none';
+                return;
+            }
+
+            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+            if (usuarios.find(user => user.email === email)) {
+                errorMessage.style.display = 'block';
+                errorMessage.innerText = 'Este email já está cadastrado!';
+                registerMessage.style.display = 'none';
+                return;
+            }
+
+            usuarios.push({ email: email, senha: password });
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            errorMessage.style.display = 'none';
+            registerMessage.style.display = 'block';
+
+            setTimeout(() => { window.location.href = 'dashboard.html'; }, 1000);
+        }
+    </script>
+</body>
+</html>

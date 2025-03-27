@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Dashboard!</h1>
+    <p>Você está logado com sucesso.</p>
+    <button onclick="logout()">Sair</button>
+
+    <script>
+        function logout() {
+            window.location.href = 'index.html'; // Redireciona para a tela de login
+        }
+    </script>
+</body>
+</html>
