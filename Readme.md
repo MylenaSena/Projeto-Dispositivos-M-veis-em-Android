@@ -17,7 +17,8 @@
 - **Backend**: Node.js / Firebase / 
 - **Banco de Dados**:  MongoDB 
 
-##💡 Melhorias futuras
+## 💡 Futuras melhorias 
+
 Sistema de avaliação das experiências voluntárias.
 
 Integração com Google Maps para localização de eventos.
