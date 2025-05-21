@@ -1,19 +1,30 @@
-/*** Tela de Login Interativa ***/
+# 📱 App Voluntariado Conectado
 
-Para sistema ou site com facilidade  para o usuário.
-Podendo logar com suas redes sociais.
-foi utilzado Html5, Css3 e JavaScript para interação das páginas.
+**Voluntariado Conectado** é um aplicativo mobile que conecta pessoas interessadas em realizar trabalhos voluntários com ONGs e instituições diversas. O objetivo da plataforma é facilitar o cadastro de voluntários, a divulgação de vagas e a gestão de inscrições em ações sociais.
 
-Como sempre, mantive o estilo no mínimo para você enlouquecer e torná-lo seu.
+## 🚀 Funcionalidades
 
-Licença MIT
+- Cadastro e login de usuários voluntários.
+- Visualização de oportunidades de voluntariado por área de interesse ou localização.
+- Cadastro de ONGs e instituições parceiras.
+- Inscrição dos usuários em atividades voluntárias.
+- Histórico de atividades já realizadas.
+- Notificações sobre novas vagas e eventos sociais.
 
-Copyright (c) 2021 Ivanoel Rodrigo
+## 📲 Tecnologias utilizadas
 
-A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e arquivos de documentação associados (o "Software"), para lidar com o Software sem restrição, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar , publicar, distribuir, sublicenciar e / ou vender cópias do Software, e permitir que as pessoas a quem o Software é fornecido o façam, sujeito às seguintes condições:
+- **Frontend**: Flutter / React Native /
+- **Backend**: Node.js / Firebase / 
+- **Banco de Dados**:  MongoDB 
 
-O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do Software.
+##💡 Melhorias futuras
+Sistema de avaliação das experiências voluntárias.
 
-* Tradução: Claro que você pode usar isso para seu projeto! Apenas certifique-se de dizer de onde você tirou isso :)
+Integração com Google Maps para localização de eventos.
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM QUALQUER TIPO DE GARANTIA, EXPRESSA OU IMPLÍCITA, INCLUINDO, SEM LIMITAÇÃO, AS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. EM NENHUMA HIPÓTESE OS AUTORES OU TITULARES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, DECORRENTE DE, FORA DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO PROGRAMAS.
+Sistema de gamificação (medalhas, rankings).
+
+Dashboard para ONGs acompanharem estatísticas de voluntários.
+
+Cadastros de novos clientes (ONG's)
+
