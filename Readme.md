@@ -1,4 +1,4 @@
-# 📱 App Conectando Oportunidades e Voluntários em Campinas
+# 📱 App Voluntáriado - Conectando Oportunidades e Voluntários em Campinas
 
 **Voluntariado Conectado** é um aplicativo mobile que conecta pessoas interessadas em realizar trabalhos voluntários com ONGs e instituições diversas. O objetivo da plataforma é facilitar o cadastro de voluntários, a divulgação de vagas e a gestão de inscrições em ações sociais.
 
