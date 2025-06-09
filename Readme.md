@@ -13,9 +13,9 @@
 
 ## 📲 Tecnologias utilizadas
 
-- **Frontend**: Flutter / React Native /
-- **Backend**: Node.js / Firebase / 
-- **Banco de Dados**:  MongoDB 
+- **Frontend**: React native 
+- **Backend**: React Native
+- **Banco de Dados**: SQL Lite
 
 ## 💡 Futuras melhorias 
 
