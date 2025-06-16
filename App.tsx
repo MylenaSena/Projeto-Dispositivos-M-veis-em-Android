@@ -1,20 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,LogBox } from 'react-native';
+import Login from './src/app/pages';
+import Register from './src/app/pages/register';
+import Inicio from './src/app/pages/inicio';
+import { ExpoRoot } from 'expo-router';
+
+LogBox.ignoreLogs([
+  "Invalid prop `style` supplied to `React.Fragment`",
+]);
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const ctx = require.context('./app');
+  return <ExpoRoot context={ctx} />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
