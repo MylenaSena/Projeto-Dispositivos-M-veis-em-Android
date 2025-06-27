@@ -29,3 +29,5 @@ Dashboard para ONGs acompanharem estatísticas de voluntários.
 
 Cadastros de novos clientes (ONG's)
 
+Integrantes: Ingrid Lopes, Mylena Sena e Alefe Guímel
+
